@@ -1,0 +1,91 @@
+@import '../../styles/variables.scss';
+
+.tokenInfo {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: $border_radius_md;
+  background-color: $secondary_color;
+  box-shadow: $shadow_md;
+
+  &.valid {
+    border-left: 4px solid $success_color;
+  }
+
+  &.invalid {
+    border-left: 4px solid $war_color;
+  }
+}
+
+.title {
+  font-size: $font_size_lg;
+  color: $primary_color;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.content {
+  p {
+    margin: 0.5rem 0;
+    color: $light_color;
+  }
+}
+
+.message {
+  font-size: $font_size_md;
+  
+  .valid & {
+    color: $success_color;
+  }
+  
+  .invalid & {
+    color: $war_color;
+  }
+}
+
+.detailedMessage {
+  margin-top: 1rem !important;
+  padding: 0.5rem;
+  background-color: rgba($dark_color, 0.3);
+  border-radius: $border_radius_sm;
+}
+
+.error {
+  margin-top: 0.5rem !important;
+  padding: 0.5rem;
+  background-color: rgba($war_color, 0.1);
+  border: 1px solid rgba($war_color, 0.3);
+  border-radius: $border_radius_sm;
+  color: $war_color !important;
+}
+
+.instructions {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: rgba($dark_color, 0.2);
+  border-radius: $border_radius_sm;
+
+  h4 {
+    color: $primary_color;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  ol {
+    padding-left: 1.5rem;
+    margin: 0.5rem 0;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    color: $light_color;
+  }
+
+  a {
+    color: $primary_color;
+    text-decoration: underline;
+    
+    &:hover {
+      color: lighten($primary_color, 10%);
+    }
+  }
+} 

@@ -1,0 +1,16 @@
+/* MedievalSharp - шрифт с игровой тематикой, подходящий для Clash of Clans */
+@font-face {
+  font-family: 'MedievalSharp';
+  src: url('/fonts/MedievalSharp-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MedievalSharp';
+  src: url('/fonts/MedievalSharp-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+} 

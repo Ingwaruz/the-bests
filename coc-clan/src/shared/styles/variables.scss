@@ -1,0 +1,60 @@
+// Основные цвета Clash of Clans
+$primary_color: #F2A900; // Золотой
+$secondary_color: #282D39; // Темно-синий
+$tertiary_color: #D93E30; // Красный
+$background_color: #0A0F1F; // Темно-синий фон
+$light_color: #FFFFFF;
+$dark_color: #121212;
+
+// Цвета для разделов
+$war_color: #D93E30; // Красный для войны
+$clan_color: #F2A900; // Золотой для клана
+$league_color: #4D64EA; // Синий для лиги
+$games_color: #47B95C; // Зеленый для игр
+$success_color: #47B95C; // Зеленый для успешных действий
+
+// Цвета ссылок
+$main_link_color: $primary_color;
+$main_link_hover_color: darken($primary_color, 10%);
+
+// Цвета кнопок
+$button_primary_bg: $primary_color;
+$button_primary_text: $light_color;
+$button_secondary_bg: $secondary_color;
+$button_secondary_text: $light_color;
+
+// Шрифты
+$font_family_primary: 'MedievalSharp', var(--font-medieval), serif;
+$font_family_secondary: 'Oxygen', var(--font-oxygen), sans-serif;
+
+// Размеры шрифта
+$font_size_xs: 0.75rem;
+$font_size_sm: 0.875rem;
+$font_size_md: 1rem;
+$font_size_lg: 1.25rem;
+$font_size_xl: 1.5rem;
+$font_size_xxl: 2rem;
+
+// Интервалы и отступы
+$spacing_xs: 0.25rem;
+$spacing_sm: 0.5rem;
+$spacing_md: 1rem;
+$spacing_lg: 1.5rem;
+$spacing_xl: 2rem;
+$spacing_xxl: 3rem;
+
+// Радиусы границ
+$border_radius_sm: 4px;
+$border_radius_md: 8px;
+$border_radius_lg: 16px;
+$border_radius_full: 999px;
+
+// Тени
+$shadow_sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow_md: 0 4px 8px rgba(0, 0, 0, 0.15);
+$shadow_lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+// Анимации
+$transition_fast: 0.15s ease-in-out;
+$transition_normal: 0.3s ease-in-out;
+$transition_slow: 0.5s ease-in-out; 

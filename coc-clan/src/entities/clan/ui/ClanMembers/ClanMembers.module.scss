@@ -1,0 +1,167 @@
+@import '../../../../shared/styles/variables.scss';
+
+.membersContainer {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.membersTable {
+  width: 100%;
+  border-collapse: collapse;
+  
+  th {
+    text-align: left;
+    padding: $spacing_sm;
+    background-color: rgba($secondary_color, 0.8);
+    color: $light_color;
+    font-family: $font_family_primary;
+    font-size: $font_size_sm;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    
+    &:first-child {
+      border-top-left-radius: $border_radius_md;
+    }
+    
+    &:last-child {
+      border-top-right-radius: $border_radius_md;
+    }
+  }
+  
+  td {
+    padding: $spacing_sm;
+    border-bottom: 1px solid rgba($secondary_color, 0.3);
+    font-size: $font_size_sm;
+    color: $light_color;
+    
+    &.highlight {
+      color: $primary_color;
+      font-weight: bold;
+    }
+  }
+  
+  tr {
+    &:hover {
+      background-color: rgba($secondary_color, 0.3);
+    }
+  }
+}
+
+.memberRow {
+  transition: background-color $transition_fast;
+}
+
+.memberInfo {
+  display: flex;
+  align-items: center;
+  gap: $spacing_sm;
+}
+
+.memberRank {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: $secondary_color;
+  font-size: $font_size_xs;
+  color: $light_color;
+  
+  &.top {
+    background-color: $primary_color;
+    color: $dark_color;
+    font-weight: bold;
+  }
+}
+
+.memberName {
+  font-weight: bold;
+}
+
+.memberRole {
+  font-size: $font_size_xs;
+  padding: $spacing_xs $spacing_sm;
+  border-radius: $border_radius_full;
+  display: inline-block;
+  text-align: center;
+  
+  &.leader {
+    background-color: $primary_color;
+    color: $dark_color;
+  }
+  
+  &.coLeader {
+    background-color: rgba($primary_color, 0.7);
+    color: $dark_color;
+  }
+  
+  &.admin {
+    background-color: rgba($primary_color, 0.5);
+    color: $dark_color;
+  }
+  
+  &.member {
+    background-color: rgba($secondary_color, 0.7);
+    color: $light_color;
+  }
+}
+
+.trophiesCell {
+  display: flex;
+  align-items: center;
+  gap: $spacing_xs;
+  
+  img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.donationRatio {
+  font-weight: bold;
+  
+  &.positive {
+    color: $games_color;
+  }
+  
+  &.negative {
+    color: $war_color;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: $spacing_sm;
+  margin-top: $spacing_md;
+}
+
+.pageButton {
+  padding: $spacing_xs $spacing_sm;
+  background-color: $secondary_color;
+  border: none;
+  border-radius: $border_radius_sm;
+  color: $light_color;
+  cursor: pointer;
+  transition: background-color $transition_fast;
+  
+  &:hover {
+    background-color: lighten($secondary_color, 10%);
+  }
+  
+  &.active {
+    background-color: $primary_color;
+    color: $dark_color;
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    
+    &:hover {
+      background-color: $secondary_color;
+    }
+  }
+} 

@@ -1,0 +1,245 @@
+@import '../../../../shared/styles/variables.scss';
+
+.header {
+  background-color: $secondary_color;
+  padding: $spacing_md 0;
+  box-shadow: $shadow_md;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: $font_family_primary;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing_md;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: $spacing_sm;
+  transition: opacity $transition_fast;
+  
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.clanEmblem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 70px;
+  
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  
+  .name {
+    font-size: $font_size_lg;
+    font-weight: bold;
+    font-family: $font_family_primary;
+  }
+  
+  .tag {
+    font-size: $font_size_xs;
+    opacity: 0.8;
+    font-family: $font_family_primary;
+  }
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: $spacing_xl;
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: $spacing_lg;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: $primary_color;
+    transition: width $transition_fast;
+  }
+  
+  &:hover::after,
+  &.active::after {
+    width: 100%;
+  }
+}
+
+.navLink {
+  color: $light_color;
+  text-decoration: none;
+  font-family: $font_family_primary !important;
+  font-size: $font_size_sm;
+  transition: color $transition_fast;
+  
+  &:hover,
+  &.active {
+    color: $primary_color;
+  }
+}
+
+.mobileButton {
+  display: none;
+  background: none;
+  border: none;
+  color: $light_color;
+  font-size: $font_size_xl;
+  cursor: pointer;
+  
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.mobileNav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: $secondary_color;
+  box-shadow: $shadow_lg;
+  z-index: 200;
+  padding: $spacing_lg;
+  transform: translateX(100%);
+  transition: transform $transition_normal;
+  font-family: $font_family_primary;
+  
+  &.open {
+    transform: translateX(0);
+  }
+  
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
+.mobileNavClose {
+  position: absolute;
+  top: $spacing_md;
+  right: $spacing_md;
+  background: none;
+  border: none;
+  color: $light_color;
+  font-size: $font_size_lg;
+  cursor: pointer;
+}
+
+.mobileNavList {
+  list-style: none;
+  padding: 0;
+  margin: $spacing_xl 0 0 0;
+}
+
+.mobileNavItem {
+  margin-bottom: $spacing_md;
+}
+
+.mobileNavLink {
+  color: $light_color;
+  text-decoration: none;
+  font-family: $font_family_primary !important;
+  font-size: $font_size_md;
+  display: block;
+  padding: $spacing_sm 0;
+  transition: color $transition_fast;
+  
+  &:hover,
+  &.active {
+    color: $primary_color;
+  }
+}
+
+.cookieConsent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($secondary_color, 0.95);
+  color: $light_color;
+  padding: $spacing_md;
+  z-index: 99;
+  box-shadow: $shadow_md;
+  font-family: $font_family_secondary;
+}
+
+.cookieContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: $spacing_md;
+  
+  p {
+    margin: 0;
+    flex: 1;
+    min-width: 300px;
+    font-size: $font_size_sm;
+  }
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    
+    p {
+      margin-bottom: $spacing_sm;
+    }
+  }
+}
+
+.cookieButton {
+  background-color: $primary_color;
+  color: $dark_color;
+  border: none;
+  padding: $spacing_sm $spacing_md;
+  border-radius: $border_radius_sm;
+  font-family: $font_family_primary;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color $transition_fast;
+  
+  &:hover {
+    background-color: darken($primary_color, 10%);
+  }
+} 

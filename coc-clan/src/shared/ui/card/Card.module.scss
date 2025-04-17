@@ -1,0 +1,75 @@
+@import '../../styles/variables.scss';
+
+.card {
+  background-color: $secondary_color;
+  border-radius: $border_radius_md;
+  padding: $spacing_md;
+  box-shadow: $shadow_md;
+  transition: transform $transition_normal, box-shadow $transition_normal;
+  overflow: hidden;
+  position: relative;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow_lg;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), transparent);
+    opacity: 0;
+    transition: opacity $transition_normal;
+  }
+  
+  &:hover::after {
+    opacity: 1;
+  }
+  
+  &.primary {
+    border-left: 4px solid $primary_color;
+  }
+  
+  &.war {
+    border-left: 4px solid $war_color;
+  }
+  
+  &.league {
+    border-left: 4px solid $league_color;
+  }
+  
+  &.games {
+    border-left: 4px solid $games_color;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: $spacing_sm;
+  margin-bottom: $spacing_md;
+}
+
+.title {
+  font-family: $font_family_primary;
+  margin: 0;
+  color: $primary_color;
+  font-size: $font_size_lg;
+}
+
+.body {
+  margin-bottom: $spacing_md;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: $spacing_md;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: $primary_color;
+} 

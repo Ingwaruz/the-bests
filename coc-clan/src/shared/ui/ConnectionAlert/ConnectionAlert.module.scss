@@ -1,0 +1,44 @@
+@import '../../../shared/styles/variables.scss';
+
+.connectionAlert {
+  background-color: rgba($tertiary_color, 0.15);
+  border: 1px solid $tertiary_color;
+  border-radius: $border_radius_md;
+  padding: $spacing_lg;
+  margin: $spacing_xl 0;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing_md;
+}
+
+.message {
+  font-size: $font_size_lg;
+  color: $tertiary_color;
+  margin-bottom: $spacing_md;
+}
+
+.retryButton {
+  background-color: $primary_color;
+  color: $dark_color;
+  font-weight: bold;
+  border: none;
+  border-radius: $border_radius_md;
+  padding: $spacing_sm $spacing_xl;
+  cursor: pointer;
+  transition: background-color $transition_fast, transform $transition_fast;
+  font-family: $font_family_primary;
+  
+  &:hover {
+    background-color: darken($primary_color, 10%);
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+} 

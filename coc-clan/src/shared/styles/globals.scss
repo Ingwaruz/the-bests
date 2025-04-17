@@ -1,0 +1,220 @@
+@import './variables.scss';
+@import './fonts.scss';
+
+/* Подключаем Google Fonts для MedievalSharp */
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+/* Сброс стилей и базовые настройки */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-size: 16px;
+  font-family: $font_family_secondary;
+  color: $light_color;
+  background-color: $background_color;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Типографика */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font_family_primary;
+  font-weight: bold;
+  margin-bottom: $spacing_md;
+  color: $primary_color;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: $font_size_xxl;
+  
+  @media (max-width: 768px) {
+    font-size: $font_size_xl;
+  }
+}
+
+h2 {
+  font-size: $font_size_xl;
+  
+  @media (max-width: 768px) {
+    font-size: $font_size_lg;
+  }
+}
+
+h3 {
+  font-size: $font_size_lg;
+}
+
+h4 {
+  font-size: $font_size_md;
+}
+
+p {
+  margin-bottom: $spacing_md;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: $main_link_color;
+  text-decoration: none;
+  transition: color $transition_fast;
+  
+  &:hover {
+    color: $main_link_hover_color;
+  }
+}
+
+/* Контейнеры и сетка */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing_md;
+  
+  @media (max-width: 768px) {
+    padding: 0 $spacing_sm;
+  }
+}
+
+.section {
+  padding: $spacing_xl 0;
+  
+  @media (max-width: 768px) {
+    padding: $spacing_lg 0;
+  }
+}
+
+/* Кнопки */
+.button {
+  display: inline-block;
+  padding: $spacing_sm $spacing_lg;
+  border: none;
+  border-radius: $border_radius_md;
+  font-family: $font_family_primary;
+  font-size: $font_size_sm;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color $transition_fast, transform $transition_fast;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  &.primary {
+    background-color: $button_primary_bg;
+    color: $button_primary_text;
+    
+    &:hover {
+      background-color: darken($button_primary_bg, 10%);
+    }
+  }
+  
+  &.secondary {
+    background-color: $button_secondary_bg;
+    color: $button_secondary_text;
+    
+    &:hover {
+      background-color: lighten($button_secondary_bg, 10%);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    padding: $spacing_xs $spacing_md;
+    font-size: $font_size_xs;
+  }
+}
+
+/* Утилиты */
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: $primary_color;
+}
+
+.text-secondary {
+  color: $secondary_color;
+}
+
+.mb-sm {
+  margin-bottom: $spacing_sm;
+}
+
+.mb-md {
+  margin-bottom: $spacing_md;
+}
+
+.mb-lg {
+  margin-bottom: $spacing_lg;
+}
+
+.mt-sm {
+  margin-top: $spacing_sm;
+}
+
+.mt-md {
+  margin-top: $spacing_md;
+}
+
+.mt-lg {
+  margin-top: $spacing_lg;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul, ol {
+  list-style-position: inside;
+}
+
+.card {
+  background-color: $secondary_color;
+  border-radius: $border_radius_md;
+  padding: $spacing_md;
+  box-shadow: $shadow_md;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+} 
