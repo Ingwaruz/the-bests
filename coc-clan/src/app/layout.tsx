@@ -2,23 +2,15 @@ import type { Metadata } from 'next';
 import '@/shared/styles/globals.scss';
 import { Header } from '@/widgets/header';
 import { Footer } from '@/widgets/footer';
-import { Oxygen, MedievalSharp } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import { LoadImagesFallback } from '@/shared/ui/LoadImagesFallback';
 
-// Конфигурируем шрифт Oxygen
-const oxygen = Oxygen({
-  subsets: ['latin'],
-  weight: ['300', '400', '700'],
+// Конфигурируем шрифт Montserrat
+const montserrat = Montserrat({
+  subsets: ['latin', 'cyrillic'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
   display: 'swap',
-  variable: '--font-oxygen',
-});
-
-// Конфигурируем шрифт MedievalSharp
-const medievalSharp = MedievalSharp({
-  subsets: ['latin'],
-  weight: ['400'],
-  display: 'swap',
-  variable: '--font-medieval',
+  variable: '--font-montserrat',
 });
 
 export const metadata: Metadata = {
@@ -32,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ru" className={`${oxygen.variable} ${medievalSharp.variable}`}>
+    <html lang="ru" className={montserrat.variable}>
       <body>
         <LoadImagesFallback />
         <Header />
