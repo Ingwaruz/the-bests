@@ -6,6 +6,8 @@ import styles from './Footer.module.scss';
 const CLAN_BADGE_URL = 'https://api-assets.clashofclans.com/badges/512/pO5TQBRlXCw63FWOGbBbvCHjH89Tnh_E-pkzzALQHjQ.png';
 const CLAN_NAME = 'Лучшие';
 const CLAN_TAG = '#20GL2UPP2';
+// Ссылка на GitHub репозиторий
+const GITHUB_REPO_URL = 'https://github.com/Ingwaruz/the-bests/tree/main/coc-clan';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -74,7 +76,7 @@ export const Footer: React.FC = () => {
               </li>
               <li className={styles.resourceItem}>
                 <a 
-                  href="https://github.com/user/coc-clan-stats" 
+                  href={GITHUB_REPO_URL} 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className={styles.resourceLink}
